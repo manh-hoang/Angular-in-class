@@ -1,0 +1,72 @@
+<h1 class="category">CATEGORY</h1>
+<div class="container">
+
+  <input type="text" placeholder="Searh" [(ngModel)]="name">
+  <div class="row">
+    <div class="col-sm-3 p-3" *ngFor="let item of listProduct | filter : name">
+      <div class="card" style="width: 16rem;">
+        <img style="width: 100%; height: 190px;" class="card-img-top" src="{{item.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 style="font-family: initial ; text-align: center;" class="card-title">{{item.name}}</h5>
+          <span style="color: rgb(140 135 135);" class="card-text p-1">Price:{{item.price}}$</span>
+          <span style="color: red;" class="card-text p-1">Sale:{{item.sale_price}}%</span>
+          <br><br>
+          <a (click)="detail" style="background-color: rgb(185, 183, 183);" class="btn">See details</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <br>
+  <div class="container">
+    <h1 class="category">BRAND</h1>
+    <div class="card-group">
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/adidas-originals-logo-3.png" alt="" width="68" height="68">
+        </div>
+      </div>
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/adidas-logo-107B082DA0-seeklogo.com.png" alt="" width="68"
+            height="68">
+        </div>
+      </div>
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/Adidas-Emblema.png" alt="" width="68" height="68">
+
+        </div>
+      </div>
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/adidas-originals-logo-3.png" alt="" width="68" height="68">
+        </div>
+      </div>
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/adidas-logo-107B082DA0-seeklogo.com.png" alt="" width="68"
+            height="68">
+        </div>
+      </div>
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/Adidas-Emblema.png" alt="" width="68" height="68">
+
+        </div>
+      </div>
+
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/adidas-originals-logo-3.png" alt="" width="68" height="68">
+        </div>
+      </div>
+      <div style="background-color: rgb(185, 183, 183);" class="card ">
+        <div class="card-body text-center">
+          <img class="mb-2 p-1" src="../../../assets/adidas-logo-107B082DA0-seeklogo.com.png" alt="" width="68"
+            height="68">
+        </div>
+      </div>
+    </div>
+  </div>

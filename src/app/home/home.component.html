@@ -1,0 +1,42 @@
+<h1>home works!</h1>
+<!-- <h1>name :{{name}} ,age :{{age}} </h1>
+<div  *ngIf="age>18;else other_content">tuoi du</div>
+<ng-template #other_content> <p>chua du tuoi</p></ng-template> -->
+
+
+<!-- <ul> 
+    <li *ngFor="let item of list_product; let i = index ; even as color " [ngStyle]="{background: color?'red':'yellow'}"> 
+     stt: {{ i + 1 }} -id:{{item.id}}- name:{{ item.name }} -{{color}}
+    </li>
+  </ul> -->
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Stt</th>
+        <th scope="col">Name</th>
+        <th scope="col">ID</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listCategory; let i = index ; even as evens " [ngStyle]="{background: evens?'red':'yellow'}">
+        <th scope="row">{{i +1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.status}}</td>
+        <button (click)="delete(item.id)">delete</button>
+        <a routerLink='/update/{{item.id}}' >update</a>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+
+  <!-- <input id="value" type="text">
+  <button (click)="log()"></button> -->
+
+ 
+
+<!-- <input type="text" [(ngModel)]="name">
+<h1>{{name}}</h1> -->

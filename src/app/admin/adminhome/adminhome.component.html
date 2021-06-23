@@ -1,0 +1,65 @@
+<!-- <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Stt</th>
+        <th scope="col">Name</th>
+        <th scope="col">ID</th>
+        <th scope="col">Status</th>
+        <th> <input type="text" placeholder="Searh" [(ngModel)]="name"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listCategory | filter : name ; let i = index ; even as evens " [ngStyle]="{background: evens?'red':'yellow'}">
+        <th scope="row">{{i +1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.id}}</td>
+        <td>{{(item.status == 1) ? 'Hien': 'An'}}</td>
+        <button (click)="delete(item.id)">delete</button>
+        <a routerLink='/update/{{item.id}}' >update</a>
+      </tr>
+     
+    </tbody>
+  </table> -->
+<div class="container-fluid p-2">
+  <div class="row text-center">
+    <div class="col-sm-8">
+      <h2>Business diagram</h2>
+      <p>Strong develop</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"><svg xmlns="http://www.w3.org/2000/svg" width="180"  fill="currentColor" style="color:rgb(228, 184, 184)" class="bi bi-bar-chart-line-fill " viewBox="0 0 16 16">
+        <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+      </svg></span>
+    
+  </div>
+</div><br>
+
+
+<h2 class="text-center">Portfolio</h2><br>
+<div class="row text-center">
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="../../../assets/admin1.jpg" alt="Paris" width="400" height="300">
+      <p><strong>Paris</strong></p>
+      <p>Yes, we built Paris</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="../../../assets/admin2.jpg" alt="New York" width="400" height="300">
+      <p><strong>New York</strong></p>
+      <p>We built New York</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="../../../assets/admin3.jpg" alt="San Francisco" width="400" height="300">
+      <p><strong>San Francisco</strong></p>
+      <p>Yes, San Fran is ours</p>
+    </div>
+  </div>
+
+
+</div>
+</div>

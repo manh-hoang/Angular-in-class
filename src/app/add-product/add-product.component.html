@@ -1,0 +1,73 @@
+<div class="container">
+  
+    <form [formGroup] = "inforForm" class="w-50" >
+      
+     <div class="form-group">
+        <label for="usr">name:</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="usr">email:</label>
+        <input type="text" class="form-control" id="emial" formControlName="email">
+
+      </div>
+      <div class="form-group">
+        <label for="usr">password:</label>
+        <input type="text" class="form-control" id="password" formControlName="password">
+      </div>
+      <div class="form-group">
+        <label for="usr">role:</label>
+        <input type="text" class="form-control" id="role" formControlName="role">
+      </div>
+      <br>
+  
+      <button (click)="add()"  type="submit" class="btn btn-danger">Add new</button>
+    </form><br>
+  
+    <table class="table " >
+      <thead>
+        <tr>
+          
+          <th scope="col">Stt</th>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Password</th>
+          <th scope="col">Role</th>
+          <th scope="col">Create_att</th>
+          <th scope="col">Last_login</th>
+        <th> <input type="text" placeholder="Searh" [(ngModel)]="name"> </th>
+
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listAccount |filter : name ; let i = index ;" >
+          <th scope="row">{{i +1}}</th>
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.password}}</td>
+          <td>{{item.role}}</td>
+          <td>{{item.creaed_at}}</td>
+          <td>{{item.last_login}}</td>
+          <button (click)="deleteAccount(item.id)">delete</button>
+          <a style="color: rgb(206, 106, 106);" routerLink='/update-account/{{item.id}}' >Update</a>
+          
+          
+          
+        </tr>
+       
+      </tbody>
+  
+      
+  
+    </table>
+    
+  </div>
+  
+  
+  
+  

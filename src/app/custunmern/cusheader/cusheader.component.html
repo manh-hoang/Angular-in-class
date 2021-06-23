@@ -1,0 +1,65 @@
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand  adidas">Adidas</a>
+  <a class="navbar-brand" routerLink="catehome">Home</a>
+
+
+  <div class="dropdown">
+    <button style=" background-color: rgb(185, 183, 183);" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Category
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <ul *ngFor="let item of listCategory">
+        <li><a style="color: black;font-family: auto; font-size: 19px;"
+            routerLink="catecategory/{{item.id}}">{{item.name}}</a></li>
+      </ul>
+    </div>
+  </div>
+   <div style="margin-left: 80%;" class="navbar ">
+   
+    <svg style="width: 28px; color: white" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-person"
+      viewBox="0 0 16 16">
+      <path
+        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+    </svg>
+   
+    
+
+  </div> 
+  <!-- <input type="text" placeholder="Search" style="margin-left: 69%;"> -->
+  
+</nav>
+<div class="containerfull" >
+<div id="demo"  class="carousel" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div style="height: 500px;" class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../../assets/bn1.jpeg" alt="Los Angeles" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/bn2.jpg" alt="Chicago" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/bna.jpg" alt="New York" width="1100" height="500">
+      </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+   

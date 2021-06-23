@@ -1,0 +1,44 @@
+<h1>updata product</h1>
+<div class="container">
+  
+    <form [formGroup] = "inforForm" class="w-50" >
+      
+        <div class="form-group">
+           <label for="usr">id:</label>
+           <input type="text" class="form-control" id="id" formControlName="id" readonly>
+         </div>
+         <div class="form-group">
+            <label for="usr">name:</label>
+            <input type="text" class="form-control" id="name" formControlName="name" >
+          </div>
+         <div class="form-group">
+           <label for="usr">price:</label>
+           <input type="text" class="form-control" id="price" formControlName="price">
+    
+         </div>
+         <div class="form-group">
+           <label for="usr">sale_price:</label>
+           <input type="text" class="form-control" id="sale_price" formControlName="sale_price">
+         </div>
+         <div class="form-group">
+           <label for="usr">image:</label>
+           <input type="text" class="form-control" id="image" formControlName="image">
+         </div>
+         <div class="form-group">
+           <label for="usr">category_id:</label>
+           <input type="text" class="form-control" id="category_id" formControlName="category_id">
+         </div><div class="form-group">
+           <label for="usr">status:</label>
+           <input type="text" class="form-control" id="status" formControlName="status">
+         </div><div class="form-group">
+           <label for="usr">description:</label>
+           <input type="text" class="form-control" id="description" formControlName="description">
+         </div>
+         <br>
+     
+         <button (click)="update()"  type="submit" class="btn btn-danger">Update</button>
+       </form>
+     
+</div>
+
+
